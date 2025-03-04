@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- cfg DriverManagerDataSource as spring bean -->
+    
+   <!--  for db related we will use property tags to declare variables of class -->
+   
+    <!-- commented because of this -->
+   <!-- Note:: Here this class=org.springframework.jdbc.datasource.DriverManagerDataSource will not create pool so best is hicari cp for standalone application add depency -->
+   
+   <!-- <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+   <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+    <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+    <property name="username" value="system"/>
+    <property name="password" value="ganesha"/>
+	</bean> -->
+
+
+	<!-- HikariCp uses pool connections so recommended -->
+
+	<!-- <bean id="hkDS" class="com.zaxxer.hikari.HikariDataSource">
+	<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+    <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+    <property name="username" value="system"/>
+    <property name="password" value="ganesha"/>
+	</bean> -->
+   
+   
+   
+   <!-- For ORACLE DB -->
+   
+  <!--  <bean id="hkDS" class="com.zaxxer.hikari.HikariDataSource">
+	<property name="driverClassName" value="${jdbc.driver}"/>
+    <property name="jdbcUrl" value="${jdbc.url}"/>
+    <property name="username" value="${jdbc.username}"/>
+    <property name="password" value="${jdbc.password}"/>
+	</bean> -->
+   
+ 
+   
+  <!--  We dont have annotation for alias tag so use alias tag no option for it -->
+   <!-- Enabling property file scan -->
+   <context:property-placeholder location="com/nt/commons/info.properties"/> 
+   
+   <alias name="${dao.id}" alias="dbs"/>
+
+</beans>

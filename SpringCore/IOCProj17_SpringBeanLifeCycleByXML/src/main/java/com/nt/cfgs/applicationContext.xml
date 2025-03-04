@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <!-- Rem here we have to take dot for property remaining / -->
+    <!-- property tag is used for setter injection -->
+    <bean id="voter" class="com.nt.sbeans.Voter" init-method="init" destroy-method="destory">
+    <property name="name" value="nikhil"></property>
+    <property name="age" value="24"/>
+    <!-- <property name="age" value="-24"/> -->  <!-- Here age is given as -24 which is negative so it is giving error because of we have checked with init and destory method -->
+    </bean>
+</beans>
