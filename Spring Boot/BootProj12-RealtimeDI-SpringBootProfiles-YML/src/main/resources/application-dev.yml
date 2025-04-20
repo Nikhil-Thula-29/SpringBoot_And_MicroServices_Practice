@@ -1,0 +1,11 @@
+
+#MySQL properties
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_microservices
+    username: root
+    password: Srilaxmi@9
+    type: org.apache.commons.dbcp2.BasicDataSource
+
+

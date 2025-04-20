@@ -1,0 +1,15 @@
+package com.nt.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.nt.entity.JobSeekerInfo;
+
+public interface IJobSeekerInfoRepository extends JpaRepository<JobSeekerInfo, Integer> {
+
+	@Query("select resumePath from JobSeekerInfo where jsid=:id")
+	public String getResumePathByJsId(Integer id);
+	
+	@Query("select photoPath from JobSeekerInfo where jsid=:id")
+	public String getPhotoPathByJsId(Integer id);
+}

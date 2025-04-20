@@ -1,0 +1,20 @@
+Name: John Doe  
+Phone: (123) 456-7890  
+Email: johndoe@example.com  
+LinkedIn: linkedin.com/in/johndoe  
+GitHub: github.com/johndoe  
+
+Summary:  
+Experienced Java Full Stack Developer with expertise in Spring Boot, Angular, and Microservices.  
+Passionate about building scalable and high-performance applications.  
+
+Skills:  
+- Java, Spring Boot, Microservices, Hibernate  
+- Angular, TypeScript, JavaScript, HTML, CSS  
+- MySQL, PostgreSQL, MongoDB  
+- Azure, AWS, Docker, Kubernetes  
+
+Experience:  
+Software Developer | ABC Tech | 2022 - Present  
+- Developed RESTful APIs using Spring Boot and Microservices architecture.  
+- Implemented front-end UI components using Angular.  

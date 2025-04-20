@@ -1,0 +1,60 @@
+spring:
+ profiles: 
+  active: dev
+  
+---       #This is separater(rem imp)
+  
+#For dev profile
+#MySQL properties
+spring:
+ config:
+  activate:
+   on-profile: dev
+ datasource:
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://localhost:3306/springboot_microservices
+   username: root
+   password: Srilaxmi@9
+   type: org.apache.commons.dbcp2.BasicDataSource
+   
+---
+#For prod
+#Oracle properties
+spring:
+ config: 
+  activate:
+   on-profile: prod
+ datasource:
+  driver-class-name: oracle.jdbc.OracleDriver
+  url: jdbc:oracle:thin:@localhost:1521:xe
+  username: system
+  password: ganesha
+    
+---
+#For test
+#MySQL properties
+spring:
+ config:
+  activate:
+   on-profile: test
+ datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/springboot_microservices
+  username: root
+  password: Srilaxmi@9
+  type: com.mchange.v2.c3p0.ComboPooledDataSource
+    
+---
+
+#For uat
+#Oracle properties
+spring:
+ config:
+  activate:
+   on-profile: uat
+ datasource:
+  driver-class-name: oracle.jdbc.OracleDriver
+  url: jdbc:oracle:thin:@localhost:1521:xe
+  username: system
+  password: ganesha
+  type: oracle.ucp.jdbc.PoolDataSource
