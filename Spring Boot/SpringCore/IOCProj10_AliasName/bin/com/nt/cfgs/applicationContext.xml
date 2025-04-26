@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd">  <!-- for component scan -->
+    
+    <bean id="ldt" name="ldt1,ldt2" class="java.time.LocalDateTime" factory-method="now">    <!-- Here name is used as alias name -->  
+    </bean>
+    
+    <alias name="ldt" alias="ldt3"/>
+    <alias name="ldt" alias="ldt4"/>
+    <alias name="ldt" alias="ldt5"/>
+    
+    <bean id="wmg" class="com.nt.sbeans.WishMessageGenerator"/>
+    
+   <context:component-scan base-package="com.nt.sbeans"/>
+   
+   <!-- In this code component-scaning is not working so I have taken bean tag for wmg class i.e to convert user defined to spring bean
+   normally is done by @component annotation -->
+
+</beans>

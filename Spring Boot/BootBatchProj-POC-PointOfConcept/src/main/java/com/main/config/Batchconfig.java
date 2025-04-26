@@ -55,7 +55,7 @@ public class Batchconfig {
 		return new JobBuilder("job1",repo)
 				.listener(listener)
 				.incrementer(new RunIdIncrementer())
-				.start(step1)	//above declared
+				.start(step1)
 				.build();
 	}
 }

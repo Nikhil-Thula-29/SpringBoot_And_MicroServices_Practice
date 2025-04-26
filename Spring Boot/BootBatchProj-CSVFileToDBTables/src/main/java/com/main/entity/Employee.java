@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name="BATCH_EMPLOYEE")
+@Table(name="EMPLOYEE_INFO_BATCH")
 @Data
 public class Employee {
 

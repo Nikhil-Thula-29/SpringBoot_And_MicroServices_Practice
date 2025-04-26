@@ -1,0 +1,31 @@
+emp:
+ details:
+  eno: 1001
+  ename: Raja
+  eaddrs: Wgl
+  #String arrays
+#  favcolors:
+#   - red
+#   - blue
+#   - pink
+#   - yellow
+  fav-colors: [orange,black,white]
+   #for list collections
+  nickNames:
+   - bunny
+   - munny
+   - chunny
+  phoneNumbers:
+    - 789999955
+    - 546856356
+    - 545464651
+  idDetails: 
+   aadhar: 8652315
+   panNo: 6541321
+   voterid: 353131
+  project: 
+   pid: 200
+   pname: NMPA
+   paddrs: Manglore
+   size: 583 
+  

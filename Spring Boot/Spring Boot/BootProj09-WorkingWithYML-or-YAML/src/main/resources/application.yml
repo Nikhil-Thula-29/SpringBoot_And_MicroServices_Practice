@@ -1,0 +1,9 @@
+ #tourist info
+ trst: 
+  info:
+   tid: 101
+   tname: Nikhil Thula
+   fromplace: Hyderabad
+   toplace: Goa
+   budget: 50000
+   packageType: Luxory

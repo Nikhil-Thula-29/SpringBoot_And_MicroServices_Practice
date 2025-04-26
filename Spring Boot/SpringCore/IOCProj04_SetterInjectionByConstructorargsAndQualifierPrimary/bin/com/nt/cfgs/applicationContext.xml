@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd"> <!-- 	for component scan tag -->
+    
+    <!-- kept same name variable name i.e is ldt so no ambigity problem -->
+    <bean id="ldt" class="java.time.LocalDateTime" factory-method="now"/>  
+    
+    
+    <!-- To overcome ambiguty problem use primary="true" or @primary annotation or @Qualifier("ldt1")or keep the id name same as variable name ldt1 and ldt1 -->
+   <!--  constructor-arg is used assign object type value to variable -->  
+   
+   
+   <bean id="ldt1" class="java.time.LocalDateTime" factory-method="of">
+    <constructor-arg name="year" value="2020"/>
+    <constructor-arg name="month" value="OCTOBER" type="java.time.Month"/>   <!-- value should in UPPERCASE because of enum type -->
+    <constructor-arg name="dayOfMonth" value="29"/>
+    <constructor-arg name="hour" value="11"/>
+    <constructor-arg name="minute" value="50"/>
+    <constructor-arg name="second" value="20"/>
+</bean>
+
+    <bean id="wmg" class="com.nt.sbeans.WishMessageGenerator"/>
+    
+   <context:component-scan base-package="com.nt.sbeans"/>
+   
+   <!-- In this code component-scaning is not working so I have taken bean tag for wmg class i.e to convert user defined to spring bean
+   normally is done by @component annotation -->
+
+</beans>
